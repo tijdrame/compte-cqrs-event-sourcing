@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: compte-service
+  #jpa:
+    #properties:
+    #  hibernate:
+     #   temp.use_jdbc_metadata_defaults: false
+    #database-platform: org.hibernate.dialect.PostgreSQL9Dialect
+    #database: POSTGRESQL
+    #show-sql: true
+    #hibernate:
+      #show-sql: true
+      #dialect: org.hibernate.dialect.PostgreSQL12Dialect
+     # ddl-auto: update
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/comptecqrsdb
+    username: postgres
+    password: passer
+  
+  jpa:
+    database-platform: org.hibernate.dialect.PostgresPlusDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      naming.implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyJpaCompliantImpl
+      format_sql: true
+  
+
+server:
+  port: 8088
